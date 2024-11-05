@@ -1,6 +1,8 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/api/status", () => "Server running!");
+
+app.UseStaticFiles();
 
 app.Run();
